@@ -96,6 +96,6 @@ function carregando(){
 
     setTimeout(() => {
         window.print()
-    }, 500)
+    }, 2000)
 
 }
