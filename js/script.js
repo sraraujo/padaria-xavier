@@ -56,8 +56,11 @@ function gerarPdf(){
             
         // zerando todos valores
         setTimeout(() => {
-            zerarTela()
-        }, 5000)
+            dados.style.display = "block"
+            etiquetas.innerHTML = ""
+            produto.value = ""
+            dataInput.value = ""
+        }, 2000)
 
     } else{
         alerta()
@@ -91,14 +94,7 @@ function carregando(){
         },
     }).showToast()
 
-    setTimeout(() => {
-        window.print()
-    }, 2000)
-}
+    window.print()
 
-function zerarTela(){
-    dados.style.display = "block"
-    etiquetas.innerHTML = ""
-    produto.value = ""
-    dataInput.value = ""
+    return false
 }
