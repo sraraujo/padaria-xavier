@@ -53,11 +53,7 @@ function gerarPdf(){
         dados.style.display = "none"
 
         carregando()
-    
-        setTimeout(() => {
-            window.print()
-        }, 3000)
-        
+            
         // zerando todos valores
         setTimeout(() => {
             dados.style.display = "block"
@@ -97,5 +93,9 @@ function carregando(){
             background: "#00c541",
         },
     }).showToast()
+
+    setTimeout(() => {
+        window.print()
+    }, 3000)
 
 }
