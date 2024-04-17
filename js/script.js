@@ -56,7 +56,7 @@ function gerarPdf(){
     
         setTimeout(() => {
             window.print()
-        }, 5000)
+        }, 3000)
         
         // zerando todos valores
         setTimeout(() => {
