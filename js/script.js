@@ -56,7 +56,7 @@ function gerarPdf(){
     
         setTimeout(() => {
             window.print()
-        }, 3000)
+        }, 5000)
         
         // zerando todos valores
         setTimeout(() => {
@@ -64,7 +64,7 @@ function gerarPdf(){
             etiquetas.innerHTML = ""
             produto.value = ""
             dataInput.value = ""
-        }, 5000)
+        }, 3000)
 
     } else{
         alerta()
