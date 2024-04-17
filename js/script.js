@@ -68,7 +68,7 @@ function gerarPdf(){
         etiquetas.innerHTML = ""
         produto.value = ""
         dataInput.value = ""
-    }, 5000)
+    }, 10000)
 
 }
 
