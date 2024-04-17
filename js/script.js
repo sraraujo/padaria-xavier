@@ -53,18 +53,23 @@ function gerarPdf(){
         dados.style.display = "none"
 
         carregando()
-            
-        // zerando todos valores
+
         setTimeout(() => {
-            dados.style.display = "block"
-            etiquetas.innerHTML = ""
-            produto.value = ""
-            dataInput.value = ""
-        }, 2000)
+            window.print()
+        }, 2000)      
 
     } else{
         alerta()
     }
+
+    // zerando todos valores
+    setTimeout(() => {
+        dados.style.display = "block"
+        etiquetas.innerHTML = ""
+        produto.value = ""
+        dataInput.value = ""
+    }, 5000)
+
 }
 
 function alerta(){
@@ -93,8 +98,6 @@ function carregando(){
             background: "#00c541",
         },
     }).showToast()
-
-    window.print()
 
     return false
 }
