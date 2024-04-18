@@ -4,16 +4,16 @@ const produto = document.getElementById("produto")
 const etiquetas = document.getElementById("etiquetasPdf")
 
 let dados = document.getElementById("dados")
+var data = 0;
 
 function gerarEtiqueta(){  
 
+    verificarData()
+
     resultado.innerHTML = ""
 
-    const da = new Date(dataInput.value)
-    const data = da.toLocaleDateString('pt-BR', {timeZone: 'UTC'})
-
     if(produto.value.length != 0){
-
+        
         resultado.innerHTML += `
             <div id="quadro">
                 <span> ${data} </span>
@@ -31,10 +31,9 @@ function gerarEtiqueta(){
 
 function gerarPdf(){
 
-    etiquetas.innerHTML = ""
+    verificarData()
 
-    const da = new Date(dataInput.value)
-    const data = da.toLocaleDateString('pt-BR', {timeZone: 'UTC'})
+    etiquetas.innerHTML = ""
 
     if(produto.value.length != 0){
 
@@ -71,6 +70,15 @@ function gerarPdf(){
         location.reload(true)
     }, 10000)
 
+}
+
+function verificarData(){
+    if (dataInput.value == "" || dataInput.value == null){
+        data = ''
+    }else{
+        const da = new Date(dataInput.value)
+        data = da.toLocaleDateString('pt-BR', {timeZone: 'UTC'})
+    }
 }
 
 function alerta(){
