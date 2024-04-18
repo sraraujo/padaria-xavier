@@ -1,5 +1,7 @@
 @charset "UTF-8";
 
+@import url("novo.css");
+
 *{
     margin: 0;
     padding: 0;
@@ -29,7 +31,7 @@ form{
 img{
     width: 191px;
     height: 107px;   
-    /* border: 1px solid black;  */
+    border: 1px solid black; 
 
     position: relative;
 }
@@ -52,8 +54,8 @@ span{
     z-index: 1;
 }
 
-#etiquetasPdf{
-    width: 800px;
+#etiquetasPdf{ 
+    width: 800px; 
     height: auto;
 
     margin: auto;

@@ -19,7 +19,7 @@ function gerarEtiqueta(){
                 <span> ${data} </span>
                 
                 <picture>
-                    <img src="imagens/bolacha-${produto.value}.png">
+                    <img src="imagens/bolacha-${produto.value}.png" class="border border-secondary">
                 </picture>
             </div>
         `
@@ -56,7 +56,7 @@ function gerarPdf(){
 
         setTimeout(() => {
             window.print()
-        }, 2000)      
+        }, 2000)
 
     } else{
         alerta()
@@ -68,6 +68,7 @@ function gerarPdf(){
         etiquetas.innerHTML = ""
         produto.value = ""
         dataInput.value = ""
+        location.reload(true)
     }, 10000)
 
 }
