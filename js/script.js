@@ -28,7 +28,6 @@ function gerarEtiqueta(){
     }
 }
 
-
 function gerarPdf(){
 
     verificarData()
